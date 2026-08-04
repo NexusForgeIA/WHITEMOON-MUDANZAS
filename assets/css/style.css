@@ -524,3 +524,33 @@ section{ position:relative; z-index:1; }
   .watio-btn span.label{ display:none; }
   .watio-btn{ padding:14px; }
 }
+
+/* =========================================================================
+   MÓVIL — coste de pintado
+   El blur de backdrop-filter es lo más caro de pintar y en pantallas
+   pequeñas apenas se percibe. Se neutraliza y se compensa subiendo la
+   opacidad del fondo para que todo se siga leyendo igual.
+   Escritorio no se toca.
+   ========================================================================= */
+@media (max-width:768px){
+  .topbar,
+  .header,
+  .mobile-nav,
+  .hero__card,
+  .svc__num,
+  .svc__ic,
+  .stat,
+  .watio-panel{
+    -webkit-backdrop-filter:none !important;
+    backdrop-filter:none !important;
+  }
+
+  /* fondos algo más opacos para conservar la legibilidad sin el blur */
+  .topbar{ background:rgba(10,10,14,.75); }
+  .header{ background:rgba(10,10,14,.86); }
+  .mobile-nav{ background:rgba(8,8,13,1); }
+  .hero__card{ background:linear-gradient(180deg, rgba(22,22,31,.95), rgba(16,16,23,.86)); }
+  .svc__num{ background:rgba(10,10,14,.7); }
+  .svc__ic{ background:rgba(10,10,14,.7); }
+  .stat{ background:linear-gradient(180deg, rgba(22,22,31,.82), rgba(16,16,23,.74)); }
+}
