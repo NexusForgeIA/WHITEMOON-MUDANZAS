@@ -190,6 +190,13 @@ section{ position:relative; z-index:1; }
 .hero__meta div{ display:flex; align-items:center; gap:10px; font-size:14px; color:var(--steel-2); }
 .hero__meta svg{ width:18px; height:18px; color:var(--volt); flex:none; }
 
+/* columna derecha del hero: furgoneta + tarjeta */
+.hero__aside{ display:grid; gap:20px; }
+.hero__media{ margin:0; position:relative; border-radius:var(--radius); overflow:hidden; border:1px solid var(--line-2); background:var(--bg-3); }
+.hero__media img{ width:100%; height:auto; display:block; }
+.hero__media::after{ content:""; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(150deg, rgba(124,77,255,.14), transparent 46%); }
+
 /* tarjeta lateral del hero (glass) */
 .hero__card{
   border:1px solid var(--line-2); border-radius:var(--radius);
@@ -491,7 +498,7 @@ section{ position:relative; z-index:1; }
   .nav, .header__cta .btn{ display:none; }
   .burger{ display:inline-flex; }
   .hero__grid{ grid-template-columns:1fr; }
-  .hero__card{ order:2; }
+  .hero__aside{ order:2; max-width:520px; }
   .quote__box{ grid-template-columns:1fr; }
   .about__grid{ grid-template-columns:1fr; }
   .about__media{ max-width:420px; }
