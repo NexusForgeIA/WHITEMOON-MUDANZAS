@@ -40,7 +40,14 @@
 <!-- Fuentes -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- LCP candidate del hero -->
+<link rel="preload" as="image" href="assets/mudanzas-white-1.jpeg" fetchpriority="high">
+
+<!-- Carga asíncrona: la hoja de fuentes deja de bloquear el render -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"></noscript>
 
 <link rel="stylesheet" href="assets/css/style.css">
 

@@ -94,7 +94,7 @@
 
   /* ---------- Hero: red animada de fondo (canvas) ---------- */
   const canvas = $("#circuit");
-  if (canvas && !reduced) {
+  if (canvas && !reduced && window.matchMedia("(min-width:768px)").matches) {
     const ctx = canvas.getContext("2d");
     let W, H, dpr, nodes = [], pulses = [], raf = null, visible = true;
     const VOLT = "#7c4dff", STEEL = "#9FB3C8";
